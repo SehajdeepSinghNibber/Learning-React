@@ -1,0 +1,11 @@
+.intro{
+  background-color: teal;
+  color: white;
+  padding: 2rem;
+}
+
+.external_css{
+  background-color: black;
+  color: red;
+  padding: 2rem;
+}

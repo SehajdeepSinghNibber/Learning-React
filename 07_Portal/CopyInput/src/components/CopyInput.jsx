@@ -1,4 +1,5 @@
     import React, { useState } from 'react'
+import PopupContent from './PopupContent'
 
     const CopyInput = () => {
 
@@ -27,6 +28,7 @@
         placeholder=''
         onChange={e=>setInputValue(e.target.value)} />
         <button onClick={handleCopy}>{copyValue()}</button>
+        <PopupContent copy={copy}/>
         </div>
     )
     }

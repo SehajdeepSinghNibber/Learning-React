@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 const Switcher = () => {
 
-    const [sw,setSW] = useState(false)
+  const [sw,setSW] = useState(false)
     
   return (
     <div>

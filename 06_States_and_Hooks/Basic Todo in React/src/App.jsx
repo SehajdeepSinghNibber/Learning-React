@@ -12,8 +12,8 @@ function App() {
   const handleKeyDown = (e) => {
   if (e.key === 'Enter') {
     addTodo()
+    }
   }
-}
 
 const handleDelete =(index)=>{
   setTodo(todo.filter((_, i) => i !== index))

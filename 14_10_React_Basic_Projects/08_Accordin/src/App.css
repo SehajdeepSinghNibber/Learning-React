@@ -1,0 +1,121 @@
+/* ===== Root / Theme ===== */
+:root {
+  --bg: #0b0f19;
+  --card-bg: #121826;
+  --border: #1f2937;
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --accent: #22d3ee;
+}
+
+/* ===== Page Container ===== */
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.container {
+  max-width: 720px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+/* ===== Heading ===== */
+.container h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+/* ===== Accordion Item ===== */
+.accordion-item {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0)
+  );
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.accordion-item:hover {
+  border-color: rgba(34, 211, 238, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* ===== Accordion Title ===== */
+.accordion-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.accordion-title h3 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+/* ===== Toggle Icon ===== */
+.accordion-title span {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--accent);
+  transition: transform 0.25s ease;
+}
+
+/* Rotate icon when open */
+.accordion-item:has(.accordion-content) .accordion-title span {
+  transform: rotate(180deg);
+}
+
+/* ===== Accordion Content ===== */
+.accordion-content {
+  padding: 0 24px 20px;
+  animation: fadeSlide 0.3s ease forwards;
+}
+
+.accordion-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* ===== Animation ===== */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  .container {
+    margin: 50px auto;
+  }
+
+  .accordion-title {
+    padding: 18px 20px;
+  }
+
+  .accordion-content {
+    padding: 0 20px 18px;
+  }
+}
